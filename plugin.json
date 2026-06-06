@@ -1,0 +1,8 @@
+{
+    "name": "Discord",
+    "slug": "discord",
+    "version": "1.0.0",
+    "author": "Nexpell",
+    "description": "Discord community integration",
+    "api_version": 1
+}
