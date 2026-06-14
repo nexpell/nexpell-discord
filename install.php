@@ -11,7 +11,7 @@ PluginInstallerHelper::install([
     'modulname'  => 'discord',
     'name'       => 'Discord',
     'version'    => (string)($plugin['version'] ?? '0.0.0'),
-    'author'     => 'T-Seven',
+    'author'     => 'Nexpell-Team',
     'website'    => 'https://www.nexpell.de',
     'path'       => 'includes/plugins/discord/',
     'admin_file' => 'admin_discord',
@@ -24,14 +24,6 @@ PluginInstallerHelper::install([
             'en' => 'Discord community integration with page, sidebar widget, and admin configuration.',
             'it' => 'Integrazione della community Discord con pagina, widget sidebar e configurazione admin.'
         ]
-    ],
-
-    'tables' => [
-        'plugins_discord' => '
-            name VARCHAR(100) NOT NULL,
-            value TEXT,
-            PRIMARY KEY (name)
-        '
     ],
 
     'permissions' => [
@@ -75,3 +67,9 @@ PluginInstallerHelper::install([
     ]
 
 ]);
+
+safe_query("CREATE TABLE IF NOT EXISTS plugins_discord (
+  name VARCHAR(100) NOT NULL,
+  value TEXT,
+  PRIMARY KEY (name)
+) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
