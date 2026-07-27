@@ -2,10 +2,10 @@
 
 .widget-discord {
   border: 1px solid var(--discord-card-border) !important;
-  /*border-radius: 0px !important;*/
+  border-radius: var(--nx-component-radius, var(--nx-theme-radius-lg, var(--bs-border-radius-lg, .5rem))) !important;
   overflow: hidden;
   background: var(--discord-card-bg);
-  box-shadow: none !important;
+  box-shadow: var(--nx-component-shadow, var(--nx-theme-card-shadow, none)) !important;
 }
 
 .widget-discord .discord-header {
